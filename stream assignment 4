@@ -22,7 +22,7 @@ public class News {
                  new News(3, "T", "u", "have a nice day"),
                  new News(4, "f", "m", "good friday")
          );
-         System.out.println("\n" + "Stream Fourth Question ouput");
+         System.out.println("\n" + "newsList");
          List<Integer> lst = new ArrayList<>();
          for(Iterator iterator = newsList.iterator(); iterator.hasNext();)  {
              News n = (News) iterator.next();
