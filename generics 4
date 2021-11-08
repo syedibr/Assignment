@@ -1,0 +1,36 @@
+package generics;
+
+import java.util.Date;
+
+public class Generics4 {
+    public static class Pair<k, v> {
+
+        private k key;
+        private v value;
+
+        public Pair(k key, v value) {
+            super();
+            this.key = key;
+            this.value = value;
+        }
+
+        public <k, v> String showData() {
+
+            return key + "  " + value;
+
+        }
+            public class Generics{
+
+                public static void main(String[] args) {
+
+                    Generics4.Pair<String, String> obj1 = new Generics4.Pair<String, String>("1", "Hello");
+                    Generics4.Pair<String, Date> obj2 = new Generics4.Pair<>("Today is :", new java.util.Date());
+
+                    System.out.println(obj1.showData());
+                    System.out.println(obj2.showData());
+                }
+
+            }
+        }
+    }
+
