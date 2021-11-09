@@ -83,7 +83,7 @@ public class Test {
     </bean>
     <bean id="customer" class="rainbow.Customer">
       <constructor-arg type="int" value="231"/>
-        <constructor-arg type="java.lang.String" value="yaseen"/>
+        <constructor-arg type="java.lang.String" value="ibu"/>
           <constructor-arg>
           <ref bean="address"/>
           </constructor-arg>
