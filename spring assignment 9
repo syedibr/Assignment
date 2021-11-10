@@ -1,0 +1,42 @@
+package spring9;
+
+public class HelloWorld {
+	public void init() throws Exception{
+		System.out.println("Bean HelloWorld has been"+"instantiated and i'm"+"the init()method");
+	}
+public void destroy()throws Exception{
+	System.out.println("Container has been closed"+"and i'm the destroy()method");
+}
+}
+//class file
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class ibu {
+	public static void main(String[] args) throws Exception
+	{
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("IbuProject.xml");
+		context.close();
+		
+}
+}
+
+
+//xml file
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           
+           <bean id="helloworld" class="spring9.HelloWorld"
+           init-method= "init" destroy-method="destroy">
+           
+           </bean>
+           
+           
+           
+           
+           </beans>
