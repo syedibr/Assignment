@@ -1,0 +1,110 @@
+package school;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+public class Question {
+	 int questionId;
+	 String question;
+	 List<String>questionlist;
+	 Set<String> questionSet;
+		Map<Integer, String> questionMap;
+	
+	public int getQuestionId() {
+			return questionId;
+		}
+		public void setQuestionId(int questionId) {
+			this.questionId = questionId;
+		}
+		public String getQuestion() {
+			return question;
+		}
+		public void setQuestion(String question) {
+			this.question = question;
+		}
+		public List<String> getquestionlist() {
+			return questionlist;
+		}
+		public void setAnswer(List<String> questionlist) {
+			this.questionlist = questionlist;
+		}
+		public Set<String> getQuestionSet() {
+			return questionSet;
+		}
+		public void setQuestionSet(Set<String> questionSet) {
+			this.questionSet = questionSet;
+		}
+		public Map<Integer, String> getQuestionMap() {
+			return questionMap;
+		}
+		public void setQuestionMap(Map<Integer, String> questionMap) {
+			this.questionMap = questionMap;
+		}
+	public Question(int questionId, String question, List<String> questionlist,Set<String>questionSet,Map<Integer,String>questionMap) {
+		super();
+		this.questionId = questionId;
+		this.question = question;
+	this.questionlist = questionlist;
+	this.questionSet= questionSet;
+	this.questionMap=questionMap;
+	}
+	
+public void quesprint() {
+	System.out.println("questionId: "+questionId+"question:"+question+"questionlist="+questionlist+"questionSet="+questionSet+"questionMap="+questionMap);
+}
+}
+//Test class
+package school;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+	ApplicationContext context=new ClassPathXmlApplicationContext("Exam2.xml");
+	Question question =(Question)context.getBean("question");
+	System.out.println(question.getQuestion() + "\n Ans: " + question.getquestionlist());
+
+	}
+
+}
+//Exam.xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           <bean id="question" class="school.Question">  
+<constructor-arg index="0" value="1"/>  
+<constructor-arg index="1" value="Name any 2 design pattern ?"></constructor-arg>  
+<constructor-arg index="2">  
+<list>  
+ <value>SingeltonDP</value>
+ <value>Factory DP</value>
+</list>  
+</constructor-arg> 
+
+<constructor-arg index="3">  
+<set>  
+ <value>SingeltonDP</value>
+ <value>Factory DP</value>
+</set>  
+</constructor-arg> 
+
+<constructor-arg index="4">  
+<map>  
+<entry key="1"  value="SingeltonDP"></entry>  
+<entry key="2" value="Factory DP"></entry>  
+</map>  
+</constructor-arg>  
+ 
+</bean>   
+           
+</beans>
+
+
+
+
+
+
+
