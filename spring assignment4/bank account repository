@@ -1,4 +1,4 @@
-package SpringCore4;
+package Spring4;
 
 import org.springframework.stereotype.Repository;
 
