@@ -38,10 +38,10 @@ public class StreamDemo {
 				); 
 
 		List<Trader> traderList = Arrays.asList(
-				new Trader("O", "Pune"),
+				new Trader("O", "madurai"),
 				new Trader("N", "Mumbai"),
-				new Trader("M", "pune"),
-				new Trader("P", "Delhi"),
+				new Trader("M", "chennai"),
+				new Trader("P", "trichy"),
 				new Trader("Q", "Indore")
 				);
 		
