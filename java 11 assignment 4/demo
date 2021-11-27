@@ -11,7 +11,7 @@ public class FileDemo {
 
 	public static void main(String[] args) throws IOException {
 		
-		var path = "C:\\Users\\nkawadka\\git\\repository\\JavaAssignmenta\\Assignments\\src\\Java_11_4\\StudentList.txt";
+		var path = "C:\\Users\\ibu\\git\\repository\\JavaAssignmenta\\Assignments\\src\\Java_11_4\\StudentList.txt";
 		
 		 List<String> str = Files.readAllLines(Path.of(path));
 		 
