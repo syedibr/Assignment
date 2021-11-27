@@ -23,7 +23,7 @@ public class Annotation2nd {
 @Retention (RetentionPolicy.RUNTIME)
 @interface Info  {
 	    int AuthorID();
-		String Author()  default "Nikhil";
+		String Author()  default "ibu";
 		String supervisor() default "ABC";
 		String Date() default "04/11/2021";
 		String Time();
