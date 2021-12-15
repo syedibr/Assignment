@@ -18,8 +18,8 @@
 
 var Details={
 
-    firstName:"Mohamed",
-    lastName:"yaseen"
+    firstName:"syed",
+    lastName:"ibrahim"
 
 }
 
@@ -31,6 +31,6 @@ document.write("last name is : "+Details.lastName);
 
 document.write("before adding middle name: "+ Details.middleName);
 
-Details.middleName="oli";
+Details.middleName="ibu";
 
 document.write("after adding middle name: "+ Details.middleName)
